@@ -7,10 +7,9 @@
 //
 
 #import "PDPickerViewController.h"
+#import "UIPickerView+Blocks.h"
 
-@interface PDPickerViewController () <UIPickerViewDataSource, UIPickerViewDelegate>
-
-@property (nonatomic, strong) UILabel *picked;
+@interface PDPickerViewController ()
 
 @end
 
@@ -34,32 +33,15 @@
     picked.font = [UIFont boldSystemFontOfSize:20];
     [self.view addSubview:picked];
     
-    self.picked = picked;
     
     UIPickerView *picker = [UIPickerView new];
     picker.frame = CGRectMake(0, (self.view.frame.size.height - picker.frame.size.height) / 2, picker.frame.size.width, picker.frame.size.height);
-    picker.delegate = self;
-    picker.dataSource = self;
+    [picker setTitles:[self data]];
+    [picker handleSelectionWithBlock:^(UIPickerView *pickerView, NSInteger row, NSInteger component) {
+        picked.text = [NSString stringWithFormat:@"%@ %@ %@", [self data][0][[pickerView selectedRowInComponent:0]], [self data][1][[pickerView selectedRowInComponent:1]], [self data][2][[pickerView selectedRowInComponent:2]]];
+    }];
     [self.view addSubview:picker];
     
-}
-
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-
-    self.picked.text = [NSString stringWithFormat:@"%@ %@ %@", [self data][0][[pickerView selectedRowInComponent:0]], [self data][1][[pickerView selectedRowInComponent:1]], [self data][2][[pickerView selectedRowInComponent:2]]];
-    
-}
-
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    return self.data[component][row];
-}
-
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
-    return [self.data count];
-}
-
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    return [self.data[component] count];
 }
 
 - (NSArray *)data {

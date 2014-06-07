@@ -20,6 +20,7 @@
 		7116F75B19410931006C8F06 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7116F75919410931006C8F06 /* InfoPlist.strings */; };
 		7116F75D19410931006C8F06 /* PickingDessertsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7116F75C19410931006C8F06 /* PickingDessertsTests.m */; };
 		7116F7681941093C006C8F06 /* PDPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7116F7671941093C006C8F06 /* PDPickerViewController.m */; };
+		A07940E3194389D4006C29E0 /* UIPickerView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = A07940E2194389D4006C29E0 /* UIPickerView+Blocks.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		7116F75C19410931006C8F06 /* PickingDessertsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PickingDessertsTests.m; sourceTree = "<group>"; };
 		7116F7661941093C006C8F06 /* PDPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDPickerViewController.h; sourceTree = "<group>"; };
 		7116F7671941093C006C8F06 /* PDPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDPickerViewController.m; sourceTree = "<group>"; };
+		A07940E1194389D4006C29E0 /* UIPickerView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPickerView+Blocks.h"; sourceTree = "<group>"; };
+		A07940E2194389D4006C29E0 /* UIPickerView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPickerView+Blocks.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 		7116F73D19410930006C8F06 /* PickingDesserts */ = {
 			isa = PBXGroup;
 			children = (
+				A07940E1194389D4006C29E0 /* UIPickerView+Blocks.h */,
+				A07940E2194389D4006C29E0 /* UIPickerView+Blocks.m */,
 				7116F74619410930006C8F06 /* PDAppDelegate.h */,
 				7116F74719410930006C8F06 /* PDAppDelegate.m */,
 				7116F7661941093C006C8F06 /* PDPickerViewController.h */,
@@ -245,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A07940E3194389D4006C29E0 /* UIPickerView+Blocks.m in Sources */,
 				7116F7681941093C006C8F06 /* PDPickerViewController.m in Sources */,
 				7116F74819410930006C8F06 /* PDAppDelegate.m in Sources */,
 				7116F74419410930006C8F06 /* main.m in Sources */,
@@ -444,6 +450,7 @@
 				7116F76219410931006C8F06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7116F76319410931006C8F06 /* Build configuration list for PBXNativeTarget "PickingDessertsTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +459,7 @@
 				7116F76519410931006C8F06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
